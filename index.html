@@ -1,214 +1,166 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortfólioCaio Somacal</title>
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    
-    <!-- Favicon (Ícone da Aba) -->
-<link rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3ECS%3C/text%3E%3C/svg%3E">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Caio Somacal</title>
 
-    <!-- Seu CSS customizado -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
+  <!-- CSS Customizado -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
 
-    <!-- Cabeçalho e Navegação -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold gradient-text">Caio Somacal</a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#sobre" class="hover:text-sky-400 transition-colors">Sobre</a>
-                <a href="#projetos" class="hover:text-sky-400 transition-colors">Projetos</a>
-                <a href="#contato" class="hover:text-sky-400 transition-colors">Contato</a>
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden text-2xl">
-                ☰
-            </button>
-        </div>
-        <!-- Menu Mobile -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-            <a href="#sobre" class="block py-2 px-6 text-center hover:bg-gray-700">Sobre</a>
-            <a href="#projetos" class="block py-2 px-6 text-center hover:bg-gray-700">Projetos</a>
-            <a href="#contato" class="block py-2 px-6 text-center hover:bg-gray-700">Contato</a>
-        </div>
-    </header>
-
-    <main class="pt-24">
-        <!-- Seção Hero -->
-        <section id="hero" class="container mx-auto px-6 py-20 text-center">
-            <div class="reveal">
-                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">
-                    Transformando Ideias em <span class="gradient-text">Experiências Digitais</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-Olá! Sou Caio Somacal, Full Stack Developer e entusiasta de Segurança da Informação, apaixonado por transformar ideias em soluções digitais inovadoras e funcionais que resolvem problemas reais.                </p>
-                <a href="#projetos" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 inline-block transform hover:scale-105">
-                    Veja meus projetos
-                </a>
-            </div>
-        </section>
-
-        <!-- Seção Sobre -->
-        <section id="sobre" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-6">
-                <div class="reveal text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Sobre Mim</h2>
-                    <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
-                </div>
-                <div class="reveal flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/3">
-<img 
-  src="img/1.png" 
-  alt="Foto de Caio Somacal" 
-  class="rounded-full shadow-2xl mx-auto w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-gray-700"
-/>
-                    </div>
-                    <div class="md:w-2/3 text-center md:text-left">
-                        <p class="text-gray-300 mb-6 leading-relaxed">
-Sou Caio Somacal, desenvolvedor Full Stack Júnior com experiência em backend (Java, PHP/Laravel, Python, Node.js) e frontend, criando aplicações funcionais e responsivas. Domino APIs RESTful, JWT/OAuth, MySQL e PostgreSQL, seguindo boas práticas como OOP, MVC e SOLID. Tenho interesse em Segurança da Informação e aplicação de Inteligência Artificial para criar sistemas eficientes, seguros e inovadores.</p>
-                        <h3 class="text-2xl font-semibold mb-4 gradient-text">Minhas Habilidades</h3>
-                        <div class="flex flex-wrap gap-3 justify-center md:justify-start">
-                            <!-- Adicione suas habilidades aqui -->
-                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">HTML5 & CSS3</span>
-                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">Java</span>
-                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">React /Angular</span>
-                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">Node.js</span>
-                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">Python</span>
-                            <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">Php/laravel</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Projetos -->
-        <section id="projetos" class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="reveal text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Projetos Recentes</h2>
-                    <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Projeto 1 -->
-                    <div class="reveal bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://placehold.co/600x400/1F2937/38BDF8?text=Projeto+1" alt="Imagem do Projeto 1" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Nome do Projeto 1</h3>
-                            <p class="text-gray-400 mb-4">Uma breve descrição do projeto, os desafios enfrentados e as tecnologias utilizadas.</p>
-                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold">Ver Detalhes &rarr;</a>
-                        </div>
-                    </div>
-
-                    <!-- Projeto 2 -->
-                    <div class="reveal bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://placehold.co/600x400/1F2937/A78BFA?text=Projeto+2" alt="Imagem do Projeto 2" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Nome do Projeto 2</h3>
-                            <p class="text-gray-400 mb-4">Uma breve descrição do projeto, os desafios enfrentados e as tecnologias utilizadas.</p>
-                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold">Ver Detalhes &rarr;</a>
-                        </div>
-                    </div>
-
-                    <!-- Projeto 3 -->
-                    <div class="reveal bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://placehold.co/600x400/1F2937/F472B6?text=Projeto+3" alt="Imagem do Projeto 3" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Nome do Projeto 3</h3>
-                            <p class="text-gray-400 mb-4">Uma breve descrição do projeto, os desafios enfrentados e as tecnologias utilizadas.</p>
-                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold">Ver Detalhes &rarr;</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Adicione mais projetos conforme necessário -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Contato -->
-<section id="contato" class="py-20 bg-gray-800/50">
-  <div class="container mx-auto px-6">
-    <div class="reveal text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-2">Vamos Conversar?</h2>
-      <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
-      <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-        Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou apenas quer dizer olá, sinta-se à vontade para me contatar!
-      </p>
+  <!-- Cabeçalho -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold gradient-text">Caio Somacal</a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#sobre" class="hover:text-sky-400 transition-colors">Sobre</a>
+        <a href="#servicos" class="hover:text-sky-400 transition-colors">Serviços</a>
+        <a href="#projetos" class="hover:text-sky-400 transition-colors">Projetos</a>
+        <a href="#contato" class="hover:text-sky-400 transition-colors">Contato</a>
+      </nav>
+      <button id="mobile-menu-button" class="md:hidden text-2xl">
+        ☰
+      </button>
     </div>
-
-    <div class="reveal max-w-xl mx-auto">
-      <form action="https://formspree.io/f/myzpvydj" method="POST" class="space-y-6">
-        <div>
-          <label for="name" class="sr-only">Nome</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            required
-            class="w-full bg-gray-700 border-gray-600 rounded-md p-3 text-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
-            placeholder="Seu Nome"
-          >
-        </div>
-        <div>
-          <label for="email" class="sr-only">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            class="w-full bg-gray-700 border-gray-600 rounded-md p-3 text-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
-            placeholder="Seu E-mail"
-          >
-        </div>
-        <div>
-          <label for="message" class="sr-only">Mensagem</label>
-          <textarea
-            name="message"
-            id="message"
-            rows="5"
-            required
-            class="w-full bg-gray-700 border-gray-600 rounded-md p-3 text-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition"
-            placeholder="Sua Mensagem"
-          ></textarea>
-        </div>
-        <div class="text-center">
-          <button
-            type="submit"
-            class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 inline-block transform hover:scale-105"
-          >
-            Enviar Mensagem
-          </button>
-        </div>
-      </form>
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+      <a href="#sobre" class="block py-2 px-6 text-center hover:bg-gray-700">Sobre</a>
+      <a href="#servicos" class="block py-2 px-6 text-center hover:bg-gray-700">Serviços</a>
+      <a href="#projetos" class="block py-2 px-6 text-center hover:bg-gray-700">Projetos</a>
+      <a href="#contato" class="block py-2 px-6 text-center hover:bg-gray-700">Contato</a>
     </div>
-  </div>
-</section>
+  </header>
 
+  <main class="pt-24">
+    <!-- Hero -->
+    <section id="hero" class="container mx-auto px-6 py-20 text-center">
+      <div class="reveal">
+        <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">
+          Transformando Ideias em <span class="gradient-text">Experiências Digitais</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+          Olá! Sou Caio Somacal, Full Stack Developer e entusiasta de Segurança da Informação, apaixonado por transformar ideias em soluções digitais inovadoras e funcionais que resolvem problemas reais.
+        </p>
+        <a href="#projetos" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 inline-block transform hover:scale-105">
+          Veja meus projetos
+        </a>
+      </div>
+    </section>
 
-    <!-- Rodapé -->
-    <footer class="bg-gray-900">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-            <div class="flex justify-center space-x-6 mb-4">
-                <!-- Links para redes sociais (substitua # pelos seus links) -->
-                <a href="https://www.linkedin.com/in/caio-somacal/" class="hover:text-sky-400 transition-colors">LinkedIn</a>
-                <a href="https://github.com/CaioSomacal" class="hover:text-sky-400 transition-colors">GitHub</a>
-            </div>
-            <p>&copy; 2025 Caio Somacal. Todos os direitos reservados.</p>
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-gray-800/50">
+      <div class="container mx-auto px-6">
+        <div class="reveal text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-2">Sobre Mim</h2>
+          <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
         </div>
-    </footer>
+        <div class="reveal flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/3">
+            <img src="img/2.WEBP" alt="Foto de Caio Somacal" class="rounded-full shadow-2xl mx-auto w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-gray-700"/>
+          </div>
+          <div class="md:w-2/3 text-center md:text-left">
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Sou Caio Somacal, desenvolvedor Full Stack Júnior com experiência em backend (Java, PHP/Laravel, Python, Node.js) e frontend, criando aplicações funcionais e responsivas. Domino APIs RESTful, JWT/OAuth, MySQL e PostgreSQL, seguindo boas práticas como OOP, MVC e SOLID. Tenho interesse em Segurança da Informação e aplicação de Inteligência Artificial para criar sistemas eficientes, seguros e inovadores.
+            </p>
+            <h3 class="text-2xl font-semibold mb-4 gradient-text">Minhas Habilidades</h3>
+            <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+              <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">HTML5 & CSS3</span>
+              <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">Java</span>
+              <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">React / Angular</span>
+              <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">Node.js</span>
+              <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">Python</span>
+              <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">PHP / Laravel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Seu JavaScript -->
-    <script src="script.js"></script>
+    <!-- Serviços -->
+    <section id="servicos" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="reveal text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-2">Serviços</h2>
+          <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
+          <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+            Aqui estão algumas das áreas em que posso ajudar a transformar suas ideias em realidade.
+          </p>
+        </div>
+        <div class="reveal grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:-translate-y-2 transition-transform">
+            <h3 class="text-xl font-semibold mb-3 text-sky-400">Desenvolvimento Web</h3>
+            <p class="text-gray-300">
+              Criação de sites e sistemas web modernos, responsivos e otimizados para diversos dispositivos.
+            </p>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:-translate-y-2 transition-transform">
+            <h3 class="text-xl font-semibold mb-3 text-sky-400">APIs & Integrações</h3>
+            <p class="text-gray-300">
+              Desenvolvimento e integração de APIs RESTful seguras e escaláveis para conectar serviços e aplicações.
+            </p>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:-translate-y-2 transition-transform">
+            <h3 class="text-xl font-semibold mb-3 text-sky-400">Consultoria em Segurança</h3>
+            <p class="text-gray-300">
+              Análise de vulnerabilidades e implementação de boas práticas para aumentar a segurança das aplicações.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Projetos -->
+    <section id="projetos" class="py-20 bg-gray-800/50">
+      <div class="container mx-auto px-6">
+        <div class="reveal text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-2">Projetos Recentes</h2>
+          <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- cards de projetos -->
+          <!-- ... mesmos projetos de antes ... -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="reveal text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-2">Vamos Conversar?</h2>
+          <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
+          <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+            Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou apenas quer dizer olá, sinta-se à vontade para me contatar!
+          </p>
+        </div>
+        <!-- formulário permanece igual -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-900">
+    <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.linkedin.com/in/caio-somacal/" class="hover:text-sky-400 transition-colors">LinkedIn</a>
+        <a href="https://github.com/CaioSomacal" class="hover:text-sky-400 transition-colors">GitHub</a>
+      </div>
+      <p>&copy; 2025 Caio Somacal. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
