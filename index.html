@@ -1,276 +1,356 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Caio Somacal</title>
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3ECS%3C/text%3E%3C/svg%3E">
-
-    <!-- CSS customizado -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Caio Somacal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-text {
+      background: linear-gradient(to right, #38bdf8, #3b82f6, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-gray-950 text-gray-200">
 
-    <!-- Cabeçalho -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold gradient-text">Caio Somacal</a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#sobre" class="hover:text-sky-400 transition-colors">Sobre</a>
-                <a href="#solucoes" class="hover:text-sky-400 transition-colors">Soluções</a>
-                <a href="#projetos" class="hover:text-sky-400 transition-colors">Projetos</a>
-                <a href="#contato" class="hover:text-sky-400 transition-colors">Contato</a>
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/70 backdrop-blur border-b border-gray-800">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold gradient-text">Caio Somacal</a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#sobre" class="hover:text-sky-400 transition-colors">Sobre</a>
+        <a href="#habilidades" class="hover:text-sky-400 transition-colors">Habilidades</a>
+        <a href="#experiencias" class="hover:text-sky-400 transition-colors">Experiências</a>
+        <a href="#projetos" class="hover:text-sky-400 transition-colors">Projetos</a>
+        <a href="#contato" class="hover:text-sky-400 transition-colors">Contato</a>
+      </nav>
+      <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+      <a href="#sobre" class="block py-2 px-6 text-center hover:bg-gray-700">Sobre</a>
+      <a href="#habilidades" class="block py-2 px-6 text-center hover:bg-gray-700">Habilidades</a>
+      <a href="#experiencias" class="block py-2 px-6 text-center hover:bg-gray-700">Experiências</a>
+      <a href="#projetos" class="block py-2 px-6 text-center hover:bg-gray-700">Projetos</a>
+      <a href="#contato" class="block py-2 px-6 text-center hover:bg-gray-700">Contato</a>
+    </div>
+  </header>
+
+  <main class="pt-24">
+
+    <!-- Hero -->
+    <section id="hero" class="container mx-auto px-6 py-20 text-center">
+      <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+        Construindo <span class="gradient-text">Soluções Back-End</span> escaláveis
+      </h1>
+      <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+        Sou Caio Somacal, desenvolvedor Back-End apaixonado por criar sistemas robustos, APIs bem estruturadas e soluções que resolvem problemas reais.
+      </p>
+      <a href="#projetos" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 inline-block transform hover:scale-105">
+        Veja meus projetos
+      </a>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-gray-900/60">
+      <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/3">
+          <img src="img/1.png" alt="Foto de Caio Somacal" class="rounded-full shadow-2xl mx-auto w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-gray-700"/>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-            <a href="#sobre" class="block py-2 px-6 text-center hover:bg-gray-700">Sobre</a>
-            <a href="#solucoes" class="block py-2 px-6 text-center hover:bg-gray-700">Soluções</a>
-            <a href="#projetos" class="block py-2 px-6 text-center hover:bg-gray-700">Projetos</a>
-            <a href="#contato" class="block py-2 px-6 text-center hover:bg-gray-700">Contato</a>
+        <div class="md:w-2/3 text-center md:text-left">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Sobre Mim</h2>
+          <p class="text-gray-300 leading-relaxed">
+            Sou um desenvolvedor <strong>Back-End</strong> especializado em <strong>PHP (Laravel)</strong>, <strong>Node.js</strong> e <strong>Python</strong>, com sólida experiência em modelagem de bancos de dados (<strong>MySQL</strong> e <strong>PostgreSQL</strong>).  
+            Domino boas práticas de arquitetura, segurança (JWT/OAuth), APIs RESTful e princípios de código limpo (<strong>OOP, SOLID</strong>).  
+            Meu foco é criar soluções escaláveis e eficientes, que possam evoluir junto com o negócio.
+          </p>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main class="pt-24">
+    <!-- Habilidades Diferente -->
+<section id="habilidades" class="py-20 bg-gray-950">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-2">Habilidades</h2>
+    <div class="w-24 h-1 bg-sky-500 mx-auto rounded-full mb-12"></div>
 
-        <!-- Seção Hero -->
-        <section id="hero" class="container mx-auto px-6 py-20 text-center">
-            <div class="reveal">
-                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">
-                    Transformando Ideias em <span class="gradient-text">Experiências Digitais</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-                    Olá! Sou Caio Somacal, Full Stack Developer e entusiasta de Segurança da Informação, apaixonado por transformar ideias em soluções digitais inovadoras e funcionais que resolvem problemas reais.
-                </p>
-                <a href="#projetos" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 inline-block transform hover:scale-105">
-                    Veja meus projetos
-                </a>
-            </div>
-        </section>
+    <div class="flex flex-wrap justify-center gap-4">
+      <!-- Tags de Habilidade -->
+      <span class="bg-sky-500 text-gray-950 px-4 py-2 rounded-full font-semibold hover:bg-sky-600 transition cursor-default">PHP (Laravel)</span>
+      <span class="bg-indigo-500 text-gray-950 px-4 py-2 rounded-full font-semibold hover:bg-indigo-600 transition cursor-default">Node.js</span>
+      <span class="bg-green-500 text-gray-950 px-4 py-2 rounded-full font-semibold hover:bg-green-600 transition cursor-default">Python</span>
+      <span class="bg-yellow-500 text-gray-950 px-4 py-2 rounded-full font-semibold hover:bg-yellow-600 transition cursor-default">Java</span>
+      <span class="bg-red-500 text-gray-950 px-4 py-2 rounded-full font-semibold hover:bg-red-600 transition cursor-default">MySQL</span>
+      <span class="bg-pink-500 text-gray-950 px-4 py-2 rounded-full font-semibold hover:bg-pink-600 transition cursor-default">PostgreSQL</span>
+      <span class="bg-purple-500 text-gray-950 px-4 py-2 rounded-full font-semibold hover:bg-purple-600 transition cursor-default">APIs RESTful</span>
+      <span class="bg-gray-700 text-gray-100 px-4 py-2 rounded-full font-semibold hover:bg-gray-600 transition cursor-default">Git & Docker</span>
+    </div>
+  </div>
+</section>
 
-        <!-- Seção Sobre -->
-        <section id="sobre" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-6">
-                <div class="reveal text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Sobre Mim</h2>
-                    <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
-                </div>
-                <div class="reveal flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/3">
-                        <img src="img/1.png" alt="Foto de Caio Somacal" class="rounded-full shadow-2xl mx-auto w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-gray-700"/>
-                    </div>
-                    <div class="md:w-2/3 text-center md:text-left">
-                        <p class="text-gray-300 mb-6 leading-relaxed">
-                            Sou Caio Somacal, desenvolvedor Full Stack Júnior com experiência em backend (Java, PHP/Laravel, Python, Node.js) e frontend, criando aplicações funcionais e responsivas. Domino APIs RESTful, JWT/OAuth, MySQL e PostgreSQL, seguindo boas práticas como OOP, MVC e SOLID. Tenho interesse em Segurança da Informação e aplicação de Inteligência Artificial para criar sistemas eficientes, seguros e inovadores.
-                        </p>
 
-                        <!-- Habilidades -->
-                        <h3 class="text-2xl font-semibold mb-4 gradient-text">Minhas Habilidades</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <!-- Frontend -->
-                            <div class="bg-gray-800 rounded-2xl p-4 shadow-lg">
-                                <h4 class="text-sky-300 font-semibold mb-2">Frontend</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">HTML5 & CSS3</span>
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">React</span>
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Angular</span>
-                                </div>
-                            </div>
+    <!-- Experiências -->
+    <section id="experiencias" class="py-20 bg-gray-900/60">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-2">Experiências</h2>
+        <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full mb-12"></div>
 
-                            <!-- Backend -->
-                            <div class="bg-gray-800 rounded-2xl p-4 shadow-lg">
-                                <h4 class="text-sky-300 font-semibold mb-2">Backend</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Java</span>
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Node.js</span>
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Python</span>
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">PHP / Laravel</span>
-                                </div>
-                            </div>
+        <div class="space-y-8">
+          <!-- Experiência clicável -->
+          <div class="bg-gray-800 p-6 rounded-xl shadow-lg cursor-pointer hover:bg-gray-700 transition" id="estagio-btn">
+            <h3 class="text-xl font-semibold text-sky-400">Estagiário em Infraestrutura de TI e Suporte Técnico</h3>
+            <p class="text-gray-400 text-sm">Setembro 2024 – Outubro 2024</p>
+            <p class="mt-3 text-gray-300">Clique para ver mais detalhes...</p>
+          </div>
 
-                            <!-- Bancos de Dados -->
-                            <div class="bg-gray-800 rounded-2xl p-4 shadow-lg">
-                                <h4 class="text-sky-300 font-semibold mb-2">Bancos de Dados</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">MySQL</span>
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">PostgreSQL</span>
-                                </div>
-                            </div>
-
-                            <!-- Mobile -->
-                            <div class="bg-gray-800 rounded-2xl p-4 shadow-lg">
-                                <h4 class="text-sky-300 font-semibold mb-2">Mobile</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Kotlin (Android)</span>
-                                </div>
-                            </div>
-
-                            <!-- Ferramentas / DevOps -->
-                            <div class="bg-gray-800 rounded-2xl p-4 shadow-lg">
-                                <h4 class="text-sky-300 font-semibold mb-2">Ferramentas & DevOps</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Git</span>
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">GitHub</span>
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">GitLab</span>
-                                    <span class="bg-gray-700 text-sky-300 text-sm font-medium px-3 py-1 rounded-full">Docker</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Soluções em TI -->
-        <section id="solucoes" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-6">
-                <div class="reveal text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2 gradient-text">Soluções em TI</h2>
-                    <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
-                    <p class="text-gray-400 mt-4 max-w-3xl mx-auto">
-                        Atuo no desenvolvimento de soluções completas em TI, conectando as necessidades do negócio às tecnologias mais adequadas. Minhas soluções incluem análise de requisitos, otimização de processos, desenvolvimento de aplicações web e mobile, integração de sistemas e suporte à tomada de decisões estratégicas, sempre com foco em resultados.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Solução 1 -->
-                    <div class="reveal bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
-                        <h3 class="text-xl font-bold mb-2 text-sky-300">Análise de Requisitos</h3>
-                        <p class="text-gray-400">Mapeamento de necessidades do negócio, documentação de processos e definição de requisitos claros para desenvolvimento.</p>
-                    </div>
-
-                    <!-- Solução 2 -->
-                    <div class="reveal bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
-                        <h3 class="text-xl font-bold mb-2 text-sky-300">Desenvolvimento Web & Mobile</h3>
-                        <p class="text-gray-400">Criação de aplicações responsivas e funcionais, usando tecnologias modernas de frontend e backend, além de apps mobile nativos.</p>
-                    </div>
-
-                    <!-- Solução 3 -->
-                    <div class="reveal bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
-                        <h3 class="text-xl font-bold mb-2 text-sky-300">Integração de Sistemas</h3>
-                        <p class="text-gray-400">Conectar sistemas distintos via APIs, microserviços e soluções em nuvem, garantindo eficiência e segurança nos dados.</p>
-                    </div>
-
-                    <!-- Solução 4 -->
-                    <div class="reveal bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
-                        <h3 class="text-xl font-bold mb-2 text-sky-300">Suporte à Decisão</h3>
-                        <p class="text-gray-400">Fornecimento de informações estratégicas através de dashboards, relatórios e análise de dados para decisões mais assertivas.</p>
-                    </div>
-
-                    <!-- Solução 5 -->
-                    <div class="reveal bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
-                        <h3 class="text-xl font-bold mb-2 text-sky-300">Otimização de Processos</h3>
-                        <p class="text-gray-400">Melhoria contínua de fluxos de trabalho e processos internos, aumentando a produtividade e reduzindo erros operacionais.</p>
-                    </div>
-
-                    <!-- Solução 6 -->
-                    <div class="reveal bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
-                        <h3 class="text-xl font-bold mb-2 text-sky-300">Segurança & Boas Práticas</h3>
-                        <p class="text-gray-400">Aplicação de princípios de segurança da informação, boas práticas de desenvolvimento e controle de qualidade em cada projeto.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Projetos -->
-        <section id="projetos" class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="reveal text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Projetos Recentes</h2>
-                    <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Projeto 1 -->
-                    <div class="reveal bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://placehold.co/600x400/1F2937/38BDF8?text=Projeto+1" alt="Imagem do Projeto 1" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Nome do Projeto 1</h3>
-                            <p class="text-gray-400 mb-4">Uma breve descrição do projeto, os desafios enfrentados e as tecnologias utilizadas.</p>
-                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold">Ver Detalhes &rarr;</a>
-                        </div>
-                    </div>
-
-                    <!-- Projeto 2 -->
-                    <div class="reveal bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://placehold.co/600x400/1F2937/A78BFA?text=Projeto+2" alt="Imagem do Projeto 2" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Nome do Projeto 2</h3>
-                            <p class="text-gray-400 mb-4">Uma breve descrição do projeto, os desafios enfrentados e as tecnologias utilizadas.</p>
-                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold">Ver Detalhes &rarr;</a>
-                        </div>
-                    </div>
-
-                    <!-- Projeto 3 -->
-                    <div class="reveal bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://placehold.co/600x400/1F2937/F472B6?text=Projeto+3" alt="Imagem do Projeto 3" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Nome do Projeto 3</h3>
-                            <p class="text-gray-400 mb-4">Uma breve descrição do projeto, os desafios enfrentados e as tecnologias utilizadas.</p>
-                            <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold">Ver Detalhes &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Contato -->
-        <section id="contato" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-6">
-                <div class="reveal text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Vamos Conversar?</h2>
-                    <div class="w-20 h-1 bg-sky-500 mx-auto rounded-full"></div>
-                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-                        Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou apenas quer dizer olá, sinta-se à vontade para me contatar!
-                    </p>
-                </div>
-
-                <div class="reveal max-w-xl mx-auto">
-                    <form action="https://formspree.io/f/myzpvydj" method="POST" class="space-y-6">
-                        <div>
-                            <label for="name" class="sr-only">Nome</label>
-                            <input type="text" name="name" id="name" required class="w-full bg-gray-700 border-gray-600 rounded-md p-3 text-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" placeholder="Seu Nome">
-                        </div>
-                        <div>
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" required class="w-full bg-gray-700 border-gray-600 rounded-md p-3 text-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" placeholder="Seu E-mail">
-                        </div>
-                        <div>
-                            <label for="message" class="sr-only">Mensagem</label>
-                            <textarea name="message" id="message" rows="5" required class="w-full bg-gray-700 border-gray-600 rounded-md p-3 text-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition" placeholder="Sua Mensagem"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 inline-block transform hover:scale-105">Enviar Mensagem</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Rodapé -->
-    <footer class="bg-gray-900">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://www.linkedin.com/in/caio-somacal/" class="hover:text-sky-400 transition-colors">LinkedIn</a>
-                <a href="https://github.com/CaioSomacal" class="hover:text-sky-400 transition-colors">GitHub</a>
-            </div>
-            <p>&copy; 2025 Caio Somacal. Todos os direitos reservados.</p>
+          
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- Script -->
-    <script src="script.js"></script>
+    <!-- Modal full-screen -->
+    <div id="estagio-modal" class="fixed inset-0 bg-gray-950/95 z-50 hidden flex items-center justify-center p-6">
+      <div class="bg-gray-900 rounded-xl w-full max-w-4xl h-full overflow-y-auto relative shadow-2xl p-8">
+       <!-- Botão fechar -->
+<button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-sky-400 text-2xl font-bold">✕</button>
+
+<h2 class="text-3xl font-bold text-sky-400 mb-4">Estagiário em Infraestrutura de TI e Suporte Técnico</h2>
+<p class="text-gray-400 mb-2">Setembro 2024 – Outubro 2024</p>
+
+<p class="text-gray-300 mb-4">
+  Durante meu estágio na Tecnoage, prestei suporte técnico de 1º nível em hardware, software e infraestrutura de rede, garantindo a continuidade das operações e minimizando tempos de inatividade. Realizei instalações e configurações de sistemas operacionais e softwares corporativos, além de executar manutenções preventivas e corretivas.
+</p>
+
+<p class="text-gray-300 mb-4">
+  Participei da organização e controle de ativos de TI, documentando processos e procedimentos técnicos para padronização e facilidade de consulta. Desenvolvi habilidades em troubleshooting, atendimento a usuários e gestão de tickets, aprimorando minha capacidade de resolver problemas de forma rápida e eficiente.
+</p>
+
+<p class="text-gray-300">
+  Essa experiência consolidou minha competência em manter ambientes de TI estáveis, seguros e bem estruturados, prontos para suportar as operações e processos de qualquer organização.
+</p>
+</div>
+    </div>
+
+    <!-- Projetos -->
+<section id="projetos" class="py-20 bg-gray-900">
+  <div class="container mx-auto px-6">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">Projetos Recentes</h2>
+    <div class="w-16 h-1 bg-sky-500 mx-auto rounded-full mb-12"></div>
+
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Card Scanner de Vulnerabilidades Web -->
+      <div class="project-card academico bg-gray-800 rounded-xl shadow-lg overflow-hidden group relative cursor-pointer" id="scanner-card">
+        <img src="https://placehold.co/400x300/1F2937/38BDF8?text=Scanner" alt="Scanner de Vulnerabilidades Web" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/50 transition duration-300 group-hover:bg-black/70"></div>
+        <div class="absolute bottom-0 p-5">
+          <h3 class="text-lg font-bold text-white">Scanner de Vulnerabilidades Web</h3>
+          <p class="text-gray-300 text-sm mt-1">Projeto em Python para detecção de vulnerabilidades web básicas.</p>
+        </div>
+      </div>
+
+      <!-- Outros projetos -->
+      <div class="project-card academico bg-gray-800 rounded-xl shadow-lg overflow-hidden group relative">
+        <img src="https://placehold.co/400x300/F472B6/1F2937?text=PhpFlix" alt="PhpFlix" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/50 transition duration-300 group-hover:bg-black/70"></div>
+        <div class="absolute bottom-0 p-5">
+          <h3 class="text-lg font-bold text-white">PhpFlix</h3>
+          <p class="text-gray-300 text-sm mt-1">Catálogo de filmes estilo Netflix, feito em PHP.</p>
+        </div>
+      </div>
+
+      <div class="project-card pessoal bg-gray-800 rounded-xl shadow-lg overflow-hidden group relative">
+        <img src="https://placehold.co/400x300/34D399/1F2937?text=Bennys" alt="Benny's Customs" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black/50 transition duration-300 group-hover:bg-black/70"></div>
+        <div class="absolute bottom-0 p-5">
+          <h3 class="text-lg font-bold text-white">Benny's Customs</h3>
+          <p class="text-gray-300 text-sm mt-1">Sistema de gestão automotiva para servidor GTA RP.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal Scanner de Vulnerabilidades Web -->
+<div id="scanner-modal" class="fixed inset-0 bg-gray-900 bg-opacity-95 hidden z-50 overflow-y-auto p-6">
+  <div class="max-w-4xl mx-auto relative bg-gray-800 rounded-xl shadow-2xl p-8">
+    
+    <!-- Botão fechar -->
+    <button id="close-scanner-modal" class="absolute top-4 right-4 text-gray-400 hover:text-sky-400 text-2xl font-bold">✕</button>
+
+    <h2 class="text-3xl font-bold text-sky-400 mb-4">Scanner de Vulnerabilidades Web</h2>
+    <p class="text-gray-400 mb-2">Projeto acadêmico – Python</p>
+
+    <p class="text-gray-300 mb-4">
+      Projeto experimental em <strong>Python</strong> para detectar vulnerabilidades básicas em sites web, com foco em <strong>SQL Injection (SQLi)</strong> e <strong>Cross-Site Scripting (XSS)</strong>.  
+      O objetivo é auxiliar no aprendizado de <strong>segurança web</strong> de forma automatizada e educativa.
+    </p>
+
+    <p class="text-gray-300 mb-4">
+      O scanner recebe uma URL com parâmetros GET e tenta injetar payloads de teste. Ele detecta mensagens de erro de banco de dados (indicando SQLi) e reflexo de código HTML/JavaScript (indicando XSS), gerando um relatório simples no terminal.
+    </p>
+
+    <p class="text-gray-300 mb-4">
+      Estrutura do projeto:
+      <pre class="bg-gray-900 p-3 rounded text-sm text-gray-200 mt-2">
+web-vuln-scanner/
+├── scanner/
+│   ├── core.py
+│   ├── tests.py
+│   └── utils.py
+├── main.py
+├── requirements.txt
+└── README.md
+      </pre>
+    </p>
+
+    <p class="text-gray-300 mb-4">
+      Possíveis melhorias incluem adicionar novas vulnerabilidades, criar relatórios HTML/JSON, suporte a múltiplas URLs e interface gráfica.
+    </p>
+
+   <p class="text-gray-300 flex items-center gap-2">
+  GitHub: 
+  <a href="https://github.com/CaioSomacal/web-vuln-scanner" target="_blank" class="text-sky-400 hover:text-white flex items-center gap-1">
+    <i data-lucide="github" class="w-5 h-5"></i>
+    web-vuln-scanner
+  </a>
+</p>
+
+  </div>
+</div>
+
+<script>
+  // Abrir modal
+  const scannerCard = document.getElementById('scanner-card');
+  const scannerModal = document.getElementById('scanner-modal');
+  const closeScannerModal = document.getElementById('close-scanner-modal');
+
+  scannerCard.addEventListener('click', () => {
+    scannerModal.classList.remove('hidden');
+  });
+
+  closeScannerModal.addEventListener('click', () => {
+    scannerModal.classList.add('hidden');
+  });
+</script>
+
+
+   <!-- Contato Moderno -->
+<section id="contato" class="py-20 bg-gray-950">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold gradient-text">Vamos Conversar</h2>
+      <p class="text-gray-400 mt-2">Entre em contato para projetos, parcerias ou apenas para dizer oi!</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Formulário -->
+      <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-800 hover:border-sky-500 transition-all">
+        <form action="#" method="POST" class="space-y-5">
+          <div>
+            <label for="nome" class="block text-gray-300 text-sm mb-1">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-sky-500 focus:outline-none transition">
+          </div>
+          <div>
+            <label for="email" class="block text-gray-300 text-sm mb-1">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-sky-500 focus:outline-none transition">
+          </div>
+          <div>
+            <label for="mensagem" class="block text-gray-300 text-sm mb-1">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-2 focus:ring-sky-500 focus:outline-none transition"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-indigo-500 hover:to-sky-500 text-white font-semibold py-3 rounded-xl transition-transform transform hover:scale-105">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+
+      <!-- Informações de Contato -->
+      <div class="space-y-8">
+        <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-800 hover:border-sky-500 transition-all flex flex-col gap-6">
+          <!-- Email -->
+          <div class="flex items-center gap-4">
+            <i data-lucide="mail" class="w-6 h-6 text-sky-400"></i>
+            <a href="mailto:seuemail@email.com" class="text-gray-200 hover:text-sky-400 transition">seuemail@email.com</a>
+          </div>
+          <!-- LinkedIn -->
+          <div class="flex items-center gap-4">
+            <i data-lucide="linkedin" class="w-6 h-6 text-sky-400"></i>
+            <a href="https://linkedin.com/in/seulinkedin" target="_blank" class="text-gray-200 hover:text-sky-400 transition">linkedin.com/in/seulinkedin</a>
+          </div>
+          <!-- GitHub -->
+          <div class="flex items-center gap-4">
+            <i data-lucide="github" class="w-6 h-6 text-sky-400"></i>
+            <a href="https://github.com/seugithub" target="_blank" class="text-gray-200 hover:text-sky-400 transition">github.com/seugithub</a>
+          </div>
+          <!-- WhatsApp (opcional) -->
+          <div class="flex items-center gap-4">
+            <i data-lucide="smartphone" class="w-6 h-6 text-sky-400"></i>
+            <a href="https://wa.me/seunumerodetelefone" target="_blank" class="text-gray-200 hover:text-sky-400 transition">Chame no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</section>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900">
+    <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.linkedin.com/in/caio-somacal/" class="hover:text-sky-400 transition-colors">LinkedIn</a>
+        <a href="https://github.com/caiosomacal" class="hover:text-sky-400 transition-colors">GitHub</a>
+      </div>
+      <p>&copy; 2025 Caio Somacal. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    lucide.createIcons();
+
+    // Mobile menu
+    const menuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Habilidades filtro
+    const buttons = document.querySelectorAll('.filter-category');
+    const contents = document.querySelectorAll('.habilidade-content');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        contents.forEach(c => c.classList.add('hidden'));
+        buttons.forEach(btn => { btn.classList.remove('bg-sky-500', 'active-category'); btn.classList.add('bg-gray-800'); });
+        document.getElementById(targetId).classList.remove('hidden');
+        button.classList.add('bg-sky-500', 'active-category');
+        button.classList.remove('bg-gray-800');
+      });
+    });
+
+    // Modal Experiência
+    const estagioBtn = document.getElementById("estagio-btn");
+    const modal = document.getElementById("estagio-modal");
+    const closeModal = document.getElementById("close-modal");
+    estagioBtn.addEventListener("click", () => { modal.classList.remove("hidden"); });
+    closeModal.addEventListener("click", () => { modal.classList.add("hidden"); });
+    modal.addEventListener("click", (e) => { if(e.target === modal) modal.classList.add("hidden"); });
+  </script>
 </body>
 </html>
