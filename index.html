@@ -166,14 +166,88 @@
 </div>
 
 
-     <div class="project-card pessoal bg-gray-800 rounded-xl shadow-lg overflow-hidden group relative cursor-pointer" id="chronos-card">
-  <img src="https://placehold.co/400x300/3B82F6/1F2937?text=Chronos+Elegance" alt="Chronos Elegance" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+<!-- Card Smart Store -->
+<div class="project-card pessoal bg-gray-800 rounded-xl shadow-lg overflow-hidden group relative cursor-pointer" id="smartstore-card">
+  <img src="https://placehold.co/400x300/10B981/1F2937?text=Smart+Store" alt="Smart Store" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
   <div class="absolute inset-0 bg-black/50 transition duration-300 group-hover:bg-black/70"></div>
   <div class="absolute bottom-0 p-5">
-    <h3 class="text-lg font-bold text-white">Chronos Elegance</h3>
-    <p class="text-gray-300 text-sm mt-1">Landing page fictícia para loja de relógios, focada em design moderno e conversão.</p>
+    <h3 class="text-lg font-bold text-white">Smart Store</h3>
+    <p class="text-gray-300 text-sm mt-1">Sistema de vendas simples para PMEs com Python (Flask) e SQLite.</p>
   </div>
 </div>
+
+<!-- Modal Smart Store -->
+<div id="smartstore-modal" class="fixed inset-0 bg-gray-900 bg-opacity-95 hidden z-50 overflow-y-auto p-6">
+  <div class="max-w-4xl mx-auto relative bg-gray-800 rounded-xl shadow-2xl p-8">
+
+    <!-- Botão fechar -->
+    <button id="close-smartstore-modal" class="absolute top-4 right-4 text-gray-400 hover:text-sky-400 text-2xl font-bold">✕</button>
+
+    <h2 class="text-3xl font-bold text-sky-400 mb-4">Smart Store – Sistema de Gerenciamento de Vendas</h2>
+    <p class="text-gray-400 mb-2">Projeto pessoal – Python (Flask) + SQLite + Tailwind CSS</p>
+
+    <p class="text-gray-300 mb-4">
+      Smart Store é um sistema de gerenciamento de vendas simples e eficiente, ideal para pequenas empresas. Ele oferece uma solução completa para registrar vendas e monitorar o desempenho do seu negócio.
+    </p>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">✨ Funcionalidades Principais</h3>
+    <ul class="list-disc list-inside text-gray-300 mb-4">
+      <li>Controle de Vendas: registre produtos, quantidade, preço e custo</li>
+      <li>Armazenamento Híbrido: dados locais e online para acesso centralizado</li>
+      <li>Relatórios Automáticos: melhores produtos, lucro total e desempenho por produto</li>
+      <li>Design Responsivo: acesse pelo celular ou computador</li>
+      <li>Fácil de Implantar: instalação simples em Render ou Railway</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">🛠️ Tecnologias Utilizadas</h3>
+    <p class="text-gray-300 mb-4">Python (Flask), SQLite, Pandas, HTML + Tailwind CSS</p>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">🚀 Como Executar</h3>
+    <pre class="bg-gray-900 p-3 rounded text-sm text-gray-200 mb-4">
+cd smart-store
+pip install -r requirements.txt
+python app.py
+Abra o navegador em http://127.0.0.1:5000/
+    </pre>
+
+    <p class="text-gray-300 flex items-center gap-2">
+      Projeto Online: 
+      <a href="https://smart-store-t54m.onrender.com/" target="_blank" class="text-sky-400 hover:text-white flex items-center gap-1">
+        <i data-lucide="external-link" class="w-5 h-5"></i>
+        smart-store-t54m.onrender.com
+      </a>
+    </p>
+
+    <p class="text-gray-300 flex items-center gap-2 mt-4">
+      GitHub: 
+      <a href="https://github.com/CaioSomacal/smart-store" target="_blank" class="text-sky-400 hover:text-white flex items-center gap-1">
+        <i data-lucide="github" class="w-5 h-5"></i>
+        smart-store
+      </a>
+    </p>
+
+  </div>
+</div>
+
+<script>
+  // Modal Smart Store
+  const smartstoreCard = document.getElementById('smartstore-card');
+  const smartstoreModal = document.getElementById('smartstore-modal');
+  const closeSmartstoreModal = document.getElementById('close-smartstore-modal');
+
+  smartstoreCard.addEventListener('click', () => {
+    smartstoreModal.classList.remove('hidden');
+  });
+
+  closeSmartstoreModal.addEventListener('click', () => {
+    smartstoreModal.classList.add('hidden');
+  });
+
+  smartstoreModal.addEventListener('click', (e) => {
+    if(e.target === smartstoreModal) smartstoreModal.classList.add('hidden');
+  });
+</script>
+
 
 
     </div>
@@ -331,74 +405,6 @@ projeto-mrp/
     if(e.target === mrpModal) mrpModal.classList.add('hidden');
   });
 </script>
-<!-- Modal Chronos Elegance -->
-<div id="chronos-modal" class="fixed inset-0 bg-gray-900 bg-opacity-95 hidden z-50 overflow-y-auto p-6">
-  <div class="max-w-4xl mx-auto relative bg-gray-800 rounded-xl shadow-2xl p-8">
-    
-    <!-- Botão fechar -->
-    <button id="close-chronos-modal" class="absolute top-4 right-4 text-gray-400 hover:text-sky-400 text-2xl font-bold">✕</button>
-
-    <h2 class="text-3xl font-bold text-sky-400 mb-4">Chronos Elegance – Landing Page para Loja de Relógios</h2>
-    <p class="text-gray-400 mb-2">Projeto demonstrativo – HTML, CSS (Tailwind) e design responsivo</p>
-
-    <p class="text-gray-300 mb-4">
-      Projeto fictício de <strong>landing page</strong> para uma loja de relógios chamada <strong>Chronos Elegance</strong>. Desenvolvido como material de estudo e inspiração, apresenta um design moderno, minimalista e responsivo, com foco em <strong>conversão de usuários</strong> através de formulários e call-to-action.
-    </p>
-
-    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">✅ Funcionalidades</h3>
-    <ul class="list-disc list-inside text-gray-300 mb-4">
-      <li>Design elegante e minimalista</li>
-      <li>Estrutura pronta para personalização rápida</li>
-      <li>Seções para produtos, promoções e informações da loja</li>
-      <li>Formulário de contato funcional</li>
-      <li>Responsivo e compatível com dispositivos móveis</li>
-    </ul>
-
-    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">📁 Estrutura do Projeto</h3>
-    <pre class="bg-gray-900 p-3 rounded text-sm text-gray-200 mb-4">
-chronos-elegance/
-├── index.html
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   └── img/
-│       └── logo.png
-└── README.md
-    </pre>
-
-    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">🧪 Tecnologias Utilizadas</h3>
-    <p class="text-gray-300 mb-4">HTML5, CSS3 (TailwindCSS), JavaScript para interatividade e design responsivo.</p>
-
-    <p class="text-gray-300 flex items-center gap-2">
-      GitHub: 
-      <a href="https://github.com/CaioSomacal/chronos-elegance" target="_blank" class="text-sky-400 hover:text-white flex items-center gap-1">
-        <i data-lucide="github" class="w-5 h-5"></i>
-        chronos-elegance
-      </a>
-    </p>
-
-  </div>
-</div>
-
-<script>
-  // Modal Chronos Elegance
-  const chronosCard = document.getElementById('chronos-card');
-  const chronosModal = document.getElementById('chronos-modal');
-  const closeChronosModal = document.getElementById('close-chronos-modal');
-
-  chronosCard.addEventListener('click', () => {
-    chronosModal.classList.remove('hidden');
-  });
-
-  closeChronosModal.addEventListener('click', () => {
-    chronosModal.classList.add('hidden');
-  });
-
-  chronosModal.addEventListener('click', (e) => {
-    if(e.target === chronosModal) chronosModal.classList.add('hidden');
-  });
-</script>
-
 
    <!-- Contato Moderno -->
 <section id="contato" class="py-20 bg-gray-950">
