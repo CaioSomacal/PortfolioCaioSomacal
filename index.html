@@ -166,14 +166,15 @@
 </div>
 
 
-      <div class="project-card pessoal bg-gray-800 rounded-xl shadow-lg overflow-hidden group relative">
-        <img src="https://placehold.co/400x300/34D399/1F2937?text=Bennys" alt="Benny's Customs" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black/50 transition duration-300 group-hover:bg-black/70"></div>
-        <div class="absolute bottom-0 p-5">
-          <h3 class="text-lg font-bold text-white">Benny's Customs</h3>
-          <p class="text-gray-300 text-sm mt-1">Sistema de gestão automotiva para servidor GTA RP.</p>
-        </div>
-      </div>
+     <div class="project-card pessoal bg-gray-800 rounded-xl shadow-lg overflow-hidden group relative cursor-pointer" id="chronos-card">
+  <img src="https://placehold.co/400x300/3B82F6/1F2937?text=Chronos+Elegance" alt="Chronos Elegance" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-black/50 transition duration-300 group-hover:bg-black/70"></div>
+  <div class="absolute bottom-0 p-5">
+    <h3 class="text-lg font-bold text-white">Chronos Elegance</h3>
+    <p class="text-gray-300 text-sm mt-1">Landing page fictícia para loja de relógios, focada em design moderno e conversão.</p>
+  </div>
+</div>
+
 
     </div>
   </div>
@@ -328,6 +329,73 @@ projeto-mrp/
 
   mrpModal.addEventListener('click', (e) => {
     if(e.target === mrpModal) mrpModal.classList.add('hidden');
+  });
+</script>
+<!-- Modal Chronos Elegance -->
+<div id="chronos-modal" class="fixed inset-0 bg-gray-900 bg-opacity-95 hidden z-50 overflow-y-auto p-6">
+  <div class="max-w-4xl mx-auto relative bg-gray-800 rounded-xl shadow-2xl p-8">
+    
+    <!-- Botão fechar -->
+    <button id="close-chronos-modal" class="absolute top-4 right-4 text-gray-400 hover:text-sky-400 text-2xl font-bold">✕</button>
+
+    <h2 class="text-3xl font-bold text-sky-400 mb-4">Chronos Elegance – Landing Page para Loja de Relógios</h2>
+    <p class="text-gray-400 mb-2">Projeto demonstrativo – HTML, CSS (Tailwind) e design responsivo</p>
+
+    <p class="text-gray-300 mb-4">
+      Projeto fictício de <strong>landing page</strong> para uma loja de relógios chamada <strong>Chronos Elegance</strong>. Desenvolvido como material de estudo e inspiração, apresenta um design moderno, minimalista e responsivo, com foco em <strong>conversão de usuários</strong> através de formulários e call-to-action.
+    </p>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">✅ Funcionalidades</h3>
+    <ul class="list-disc list-inside text-gray-300 mb-4">
+      <li>Design elegante e minimalista</li>
+      <li>Estrutura pronta para personalização rápida</li>
+      <li>Seções para produtos, promoções e informações da loja</li>
+      <li>Formulário de contato funcional</li>
+      <li>Responsivo e compatível com dispositivos móveis</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">📁 Estrutura do Projeto</h3>
+    <pre class="bg-gray-900 p-3 rounded text-sm text-gray-200 mb-4">
+chronos-elegance/
+├── index.html
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   └── img/
+│       └── logo.png
+└── README.md
+    </pre>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">🧪 Tecnologias Utilizadas</h3>
+    <p class="text-gray-300 mb-4">HTML5, CSS3 (TailwindCSS), JavaScript para interatividade e design responsivo.</p>
+
+    <p class="text-gray-300 flex items-center gap-2">
+      GitHub: 
+      <a href="https://github.com/CaioSomacal/chronos-elegance" target="_blank" class="text-sky-400 hover:text-white flex items-center gap-1">
+        <i data-lucide="github" class="w-5 h-5"></i>
+        chronos-elegance
+      </a>
+    </p>
+
+  </div>
+</div>
+
+<script>
+  // Modal Chronos Elegance
+  const chronosCard = document.getElementById('chronos-card');
+  const chronosModal = document.getElementById('chronos-modal');
+  const closeChronosModal = document.getElementById('close-chronos-modal');
+
+  chronosCard.addEventListener('click', () => {
+    chronosModal.classList.remove('hidden');
+  });
+
+  closeChronosModal.addEventListener('click', () => {
+    chronosModal.classList.add('hidden');
+  });
+
+  chronosModal.addEventListener('click', (e) => {
+    if(e.target === chronosModal) chronosModal.classList.add('hidden');
   });
 </script>
 
