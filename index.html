@@ -155,15 +155,16 @@
         </div>
       </div>
 
-      <!-- Outros projetos -->
-      <div class="project-card academico bg-gray-800 rounded-xl shadow-lg overflow-hidden group relative">
-        <img src="https://placehold.co/400x300/F472B6/1F2937?text=PhpFlix" alt="PhpFlix" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black/50 transition duration-300 group-hover:bg-black/70"></div>
-        <div class="absolute bottom-0 p-5">
-          <h3 class="text-lg font-bold text-white">PhpFlix</h3>
-          <p class="text-gray-300 text-sm mt-1">Catálogo de filmes estilo Netflix, feito em PHP.</p>
-        </div>
-      </div>
+      <!-- Card Sistema MRP -->
+<div class="project-card academico bg-gray-800 rounded-xl shadow-lg overflow-hidden group relative cursor-pointer" id="mrp-card">
+  <img src="https://placehold.co/400x300/FACC15/1F2937?text=MRP" alt="Sistema MRP" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+  <div class="absolute inset-0 bg-black/50 transition duration-300 group-hover:bg-black/70"></div>
+  <div class="absolute bottom-0 p-5">
+    <h3 class="text-lg font-bold text-white">Sistema MRP</h3>
+    <p class="text-gray-300 text-sm mt-1">Planejamento de Necessidades de Materiais para fábrica de bicicletas e computadores.</p>
+  </div>
+</div>
+
 
       <div class="project-card pessoal bg-gray-800 rounded-xl shadow-lg overflow-hidden group relative">
         <img src="https://placehold.co/400x300/34D399/1F2937?text=Bennys" alt="Benny's Customs" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
@@ -238,6 +239,99 @@ web-vuln-scanner/
 
   closeScannerModal.addEventListener('click', () => {
     scannerModal.classList.add('hidden');
+  });
+</script>
+<!-- Modal Sistema MRP -->
+<div id="mrp-modal" class="fixed inset-0 bg-gray-900 bg-opacity-95 hidden z-50 overflow-y-auto p-6">
+  <div class="max-w-4xl mx-auto relative bg-gray-800 rounded-xl shadow-2xl p-8">
+    
+    <!-- Botão fechar -->
+    <button id="close-mrp-modal" class="absolute top-4 right-4 text-gray-400 hover:text-sky-400 text-2xl font-bold">✕</button>
+
+    <h2 class="text-3xl font-bold text-sky-400 mb-4">Sistema MRP - Fábrica de Bicicletas e Computadores</h2>
+    <p class="text-gray-400 mb-2">Projeto acadêmico – PHP + MySQL</p>
+
+    <p class="text-gray-300 mb-4">
+      Sistema web desenvolvido para planejar a necessidade de materiais (MRP) com base na produção planejada de bicicletas e computadores, garantindo o controle de estoque e evitando a falta de insumos.
+    </p>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">✅ Pré-requisitos</h3>
+    <ul class="list-disc list-inside text-gray-300 mb-4">
+      <li>PHP 8.x</li>
+      <li>MySQL ou MariaDB</li>
+      <li>Navegador web (Google Chrome, Firefox, etc)</li>
+      <li>Servidor local como XAMPP, WAMP ou Laragon</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">🚀 Instalação e Configuração</h3>
+    <pre class="bg-gray-900 p-3 rounded text-sm text-gray-200 mb-4">
+git clone https://seu-repositorio/projeto-mrp.git
+# ou baixe o .zip do projeto
+    </pre>
+
+    <p class="text-gray-300 mb-4">Depois importe o banco no <code>phpMyAdmin</code>, configure o <code>db.php</code> e acesse:</p>
+    <ul class="list-disc list-inside text-gray-300 mb-4">
+      <li><strong>Gerenciar estoque:</strong> <code>http://localhost/projeto-mrp/src/frontend/estoque.php</code></li>
+      <li><strong>Calcular MRP:</strong> <code>http://localhost/projeto-mrp/src/frontend/mrp.php</code></li>
+    </ul>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">📦 Estoque</h3>
+    <p class="text-gray-300 mb-4">Permite visualizar componentes, atualizar quantidades e salvar no banco de dados.</p>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">📊 Cálculo do MRP</h3>
+    <p class="text-gray-300 mb-4">
+      Informe a produção de bicicletas e computadores, clique em "Calcular" e o sistema mostra o necessário de cada item, o que há em estoque e o que precisa ser comprado.
+    </p>
+
+    <pre class="bg-gray-900 p-3 rounded text-sm text-gray-200 mb-4">
+Produto     | Componente   | Necessário | Em Estoque | A Comprar
+Bicicleta   | Rodas        | 12         | 10         | 2 ⚠️
+Computador  | Gabinetes    | 3          | 2          | 1 ⚠️
+    </pre>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">📁 Estrutura do Projeto</h3>
+    <pre class="bg-gray-900 p-3 rounded text-sm text-gray-200 mb-4">
+projeto-mrp/
+├── README.md
+├── database/
+│   └── schema.sql
+├── src/
+│   ├── backend/
+│   │   ├── db.php
+│   │   └── functions.php
+│   └── frontend/
+│       ├── estoque.php
+│       └── mrp.php
+    </pre>
+
+    <h3 class="text-xl font-semibold text-sky-400 mt-6 mb-2">🧪 Tecnologias Utilizadas</h3>
+    <p class="text-gray-300 mb-4">PHP (sem framework), MySQL, HTML/CSS e uma arquitetura MVC simples.</p>
+
+    <p class="text-gray-300 flex items-center gap-2">
+      GitHub: 
+      <a href="https://github.com/CaioSomacal/projeto-mrp" target="_blank" class="text-sky-400 hover:text-white flex items-center gap-1">
+        <i data-lucide="github" class="w-5 h-5"></i>
+        projeto-mrp
+      </a>
+    </p>
+  </div>
+</div>
+<script>
+  // Modal MRP
+  const mrpCard = document.getElementById('mrp-card');
+  const mrpModal = document.getElementById('mrp-modal');
+  const closeMrpModal = document.getElementById('close-mrp-modal');
+
+  mrpCard.addEventListener('click', () => {
+    mrpModal.classList.remove('hidden');
+  });
+
+  closeMrpModal.addEventListener('click', () => {
+    mrpModal.classList.add('hidden');
+  });
+
+  mrpModal.addEventListener('click', (e) => {
+    if(e.target === mrpModal) mrpModal.classList.add('hidden');
   });
 </script>
 
