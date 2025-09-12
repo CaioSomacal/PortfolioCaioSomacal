@@ -414,6 +414,7 @@ projeto-mrp/
       <p class="text-gray-400 mt-2">Entre em contato para projetos, parcerias ou apenas para dizer oi!</p>
     </div>
 
+    <!-- Grid para formulário e informações lado a lado -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <!-- Formulário -->
       <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-800 hover:border-sky-500 transition-all">
@@ -436,39 +437,6 @@ projeto-mrp/
           <p id="feedback" class="mt-4 text-green-500 font-semibold hidden">Mensagem enviada com sucesso!</p>
         </form>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- JavaScript para feedback -->
-<script>
-  const form = document.getElementById('contatoForm');
-  const feedback = document.getElementById('feedback');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault(); // impede envio padrão
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-        feedback.classList.remove('hidden'); // mostra mensagem
-        form.reset(); // limpa o formulário
-      } else {
-        alert("Houve um erro ao enviar, tente novamente.");
-      }
-    })
-    .catch(error => {
-      alert("Houve um erro ao enviar, tente novamente.");
-      console.error(error);
-    });
-  });
-</script>
-
 
       <!-- Informações de Contato -->
       <div class="space-y-8">
@@ -488,7 +456,7 @@ projeto-mrp/
             <i data-lucide="github" class="w-6 h-6 text-sky-400"></i>
             <a href="https://github.com/seugithub" target="_blank" class="text-gray-200 hover:text-sky-400 transition">github.com/seugithub</a>
           </div>
-          <!-- WhatsApp (opcional) -->
+          <!-- WhatsApp -->
           <div class="flex items-center gap-4">
             <i data-lucide="smartphone" class="w-6 h-6 text-sky-400"></i>
             <a href="https://wa.me/seunumerodetelefone" target="_blank" class="text-gray-200 hover:text-sky-400 transition">Chame no WhatsApp</a>
@@ -497,6 +465,36 @@ projeto-mrp/
       </div>
     </div>
   </div>
+</section>
+
+<!-- JavaScript para feedback -->
+<script>
+  const form = document.getElementById('contatoForm');
+  const feedback = document.getElementById('feedback');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        feedback.classList.remove('hidden'); 
+        form.reset(); 
+      } else {
+        alert("Houve um erro ao enviar, tente novamente.");
+      }
+    })
+    .catch(error => {
+      alert("Houve um erro ao enviar, tente novamente.");
+      console.error(error);
+    });
+  });
+</script>
 
   <script>
     lucide.createIcons();
